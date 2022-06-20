@@ -1,11 +1,11 @@
 #!/usr/bash/python3
-''' pip install pytube '''
 # Author : AmirZyber
 # You Can Find Me Here : 
 #                        https://zil.ink/AmirZoyber
+
 from pytube import YouTube
 
-# the youtube post link
+# youtube post link
 yt = YouTube(input("Enter YT Video Link : "))    
 
 # choose video or audio to download
@@ -20,7 +20,7 @@ if (x=='V' or x=='v'):
 elif(x=='A' or x=='a'):
     video = yt.streams.get_audio_only()
 
-#download
+# download
 if (path=='0'):
     video.download() if(x=='V' or x=='v') else video.download(filename=str(video.title)+".mp3")
 else:
